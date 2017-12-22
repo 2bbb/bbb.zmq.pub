@@ -12,6 +12,7 @@
 		9596B0271FEC99F700AD6A7E /* type_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9596B0221FEC99F700AD6A7E /* type_traits.hpp */; };
 		9596B0281FEC99F700AD6A7E /* convert.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9596B0241FEC99F700AD6A7E /* convert.hpp */; };
 		9596B0291FEC99F700AD6A7E /* register_methods.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9596B0251FEC99F700AD6A7E /* register_methods.hpp */; };
+		9596B0381FECA2E900AD6A7E /* maxmspsdk.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9596B0371FECA2E900AD6A7E /* maxmspsdk.xcconfig */; };
 		9597CDF01FE7BFD100BF5207 /* bbb.zmq.pub.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9597CDEE1FE7BFD000BF5207 /* bbb.zmq.pub.cpp */; };
 		9597CDF11FE7BFD100BF5207 /* bbb.zmq.pub.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9597CDEF1FE7BFD100BF5207 /* bbb.zmq.pub.hpp */; };
 		9597CDF61FE7F57C00BF5207 /* libzmq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9597CDF51FE7F57C00BF5207 /* libzmq.a */; };
@@ -20,7 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		22CF10220EE984600054F513 /* maxmspsdk.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = maxmspsdk.xcconfig; path = ../../libs/maxcpp/maxmspsdk.xcconfig; sourceTree = SOURCE_ROOT; };
 		22CF119D0EE9A82E0054F513 /* MaxAudioAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaxAudioAPI.framework; path = "../../libs/max-sdk/source/c74support/msp-includes/MaxAudioAPI.framework"; sourceTree = SOURCE_ROOT; };
 		2FBBEAE508F335360078DB84 /* bbb.zmq.pub.mxo */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bbb.zmq.pub.mxo; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C5493616F558AA0054C037 /* maxcpp6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = maxcpp6.h; sourceTree = "<group>"; };
@@ -28,6 +28,7 @@
 		9596B0221FEC99F700AD6A7E /* type_traits.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = type_traits.hpp; sourceTree = "<group>"; };
 		9596B0241FEC99F700AD6A7E /* convert.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = convert.hpp; sourceTree = "<group>"; };
 		9596B0251FEC99F700AD6A7E /* register_methods.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = register_methods.hpp; sourceTree = "<group>"; };
+		9596B0371FECA2E900AD6A7E /* maxmspsdk.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = maxmspsdk.xcconfig; path = ../../maxmspsdk.xcconfig; sourceTree = "<group>"; };
 		9597CDEE1FE7BFD000BF5207 /* bbb.zmq.pub.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bbb.zmq.pub.cpp; sourceTree = "<group>"; };
 		9597CDEF1FE7BFD100BF5207 /* bbb.zmq.pub.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = bbb.zmq.pub.hpp; sourceTree = "<group>"; };
 		9597CDF51FE7F57C00BF5207 /* libzmq.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzmq.a; path = ../../../../../../usr/local/Cellar/zeromq/4.2.2/lib/libzmq.a; sourceTree = "<group>"; };
@@ -53,10 +54,10 @@
 			children = (
 				9596B01F1FEC99F700AD6A7E /* include */,
 				36C5491F16F557E00054C037 /* maxcpp */,
-				22CF10220EE984600054F513 /* maxmspsdk.xcconfig */,
 				9597CDF71FE7F60700BF5207 /* libs */,
 				9597CDEF1FE7BFD100BF5207 /* bbb.zmq.pub.hpp */,
 				9597CDEE1FE7BFD000BF5207 /* bbb.zmq.pub.cpp */,
+				9596B0371FECA2E900AD6A7E /* maxmspsdk.xcconfig */,
 				22CF119D0EE9A82E0054F513 /* MaxAudioAPI.framework */,
 				19C28FB4FE9D528D11CA2CBB /* Products */,
 				9597CDF41FE7F57C00BF5207 /* Frameworks */,
@@ -204,6 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9596B0381FECA2E900AD6A7E /* maxmspsdk.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,25 +235,27 @@
 /* Begin XCBuildConfiguration section */
 		2FBBEAD008F335010078DB84 /* Development */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9596B0371FECA2E900AD6A7E /* maxmspsdk.xcconfig */;
 			buildSettings = {
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				SDKROOT = macosx10.11;
-				USER_HEADER_SEARCH_PATHS = "/Users/2bit/Documents/Program/MaxSDKs/c74support/** /usr/local/opt/zeromq/4.2.2/include";
+				USER_HEADER_SEARCH_PATHS = /usr/local/opt/zeromq/4.2.2/include;
 			};
 			name = Development;
 		};
 		2FBBEAD108F335010078DB84 /* Deployment */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9596B0371FECA2E900AD6A7E /* maxmspsdk.xcconfig */;
 			buildSettings = {
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				SDKROOT = macosx10.11;
-				USER_HEADER_SEARCH_PATHS = "/Users/2bit/Documents/Program/MaxSDKs/c74support/** /usr/local/opt/zeromq/4.2.2/include";
+				USER_HEADER_SEARCH_PATHS = /usr/local/opt/zeromq/4.2.2/include;
 			};
 			name = Deployment;
 		};
 		2FBBEAE108F335360078DB84 /* Development */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22CF10220EE984600054F513 /* maxmspsdk.xcconfig */;
+			baseConfigurationReference = 9596B0371FECA2E900AD6A7E /* maxmspsdk.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
@@ -283,7 +287,7 @@
 		};
 		2FBBEAE208F335360078DB84 /* Deployment */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22CF10220EE984600054F513 /* maxmspsdk.xcconfig */;
+			baseConfigurationReference = 9596B0371FECA2E900AD6A7E /* maxmspsdk.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
